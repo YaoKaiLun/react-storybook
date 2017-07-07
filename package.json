@@ -4,7 +4,7 @@
   "description": "my react components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Warnning: no test specified\" && exit 0",
+    "test": "jest",
     "lint": "eslint index.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -27,11 +27,15 @@
   "homepage": "https://github.com/YaoKaiLun/react-storybook#readme",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.0"
   },
   "devDependencies": {
     "@storybook/react": "^3.1.7",
+    "babel-loader": "^7.1.1",
     "eslint": "^4.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "react-svg-loader": "^1.1.1"
   }
 }

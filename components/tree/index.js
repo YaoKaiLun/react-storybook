@@ -1,22 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import Tree from './Tree'
+import TreeNode from './TreeNode'
 
-class Tree extends React.Component {
-  state = {}
-  static propTypes = {
-    title: PropTypes.string
-  }
-  static defaultProps = {
-    title: "tree"
-  }
-
-  render() {
-    let props = this.props
-
-    return (
-      <h3>{props.title}</h3>
-    )
-  }
-}
+Tree.Node = TreeNode
 
 export default Tree
