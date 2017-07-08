@@ -54,23 +54,23 @@ class NumberRange extends React.Component {
     let props = this.props
 
     return (
-        <div style={{display: 'flex', border: '1px solid #d9d9d9', justifyContent: 'center',
-          alignItems: 'center', padding: '3px', borderRadius: '4px'}}>
-          <input
-            value={state.value[0]}
-            placeholder={props.placeholder[0]}
-            onChange={(e) => { this.handleInputChange(e, 'left') }}
-            style={numberInputStyle}
-          />
-          <span style={{width: '5%', textAlign: 'center', color: 'rgba(0,0,0,.65)'}}> ~ </span>
-          <input
-            value={state.value[1]}
-            placeholder={props.placeholder[1]}
-            onChange={(e) => { this.handleInputChange(e, 'right') }}
-            style={numberInputStyle}
-          />
-        </div>
-      )
+      <div style={{display: 'flex', border: '1px solid #d9d9d9', justifyContent: 'center',
+        alignItems: 'center', padding: '3px', borderRadius: '4px'}}>
+        <input
+          value={state.value[0]}
+          placeholder={props.placeholder[0]}
+          onChange={(e) => { this.handleInputChange(e, 'left') }}
+          style={numberInputStyle}
+        />
+        <span style={{width: '5%', textAlign: 'center', color: 'rgba(0,0,0,.65)'}}> ~ </span>
+        <input
+          value={state.value[1]}
+          placeholder={props.placeholder[1]}
+          onChange={(e) => { this.handleInputChange(e, 'right') }}
+          style={numberInputStyle}
+        />
+      </div>
+    )
   }
 }
 

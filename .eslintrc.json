@@ -5,6 +5,7 @@
         "es6": true,
         "node": true
     },
+    "parser": "babel-eslint",
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaFeatures": {
@@ -19,7 +20,7 @@
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
@@ -32,6 +33,9 @@
         "semi": [
             "error",
             "never"
+        ],
+        "no-unused-vars": [
+            "warn"
         ]
     }
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint index.js",
+    "lint": "eslint components/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.1.7",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "eslint": "^4.1.1",
     "eslint-plugin-react": "^7.1.0",
