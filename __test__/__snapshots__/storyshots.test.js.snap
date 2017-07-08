@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots NumberRange normal 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "border": "1px solid #d9d9d9",
+      "borderRadius": "4px",
+      "display": "flex",
+      "justifyContent": "center",
+      "padding": "3px",
+    }
+  }
+>
+  <input
+    onChange={[Function]}
+    placeholder=""
+    style={
+      Object {
+        "border": "0",
+        "color": "rgba(0,0,0,.65)",
+        "flex": "1",
+        "fontSize": "12px",
+        "outline": "0",
+        "textAlign": "center",
+      }
+    }
+    value={0}
+  />
+  <span
+    style={
+      Object {
+        "color": "rgba(0,0,0,.65)",
+        "textAlign": "center",
+        "width": "5%",
+      }
+    }
+  >
+     ~ 
+  </span>
+  <input
+    onChange={[Function]}
+    placeholder=""
+    style={
+      Object {
+        "border": "0",
+        "color": "rgba(0,0,0,.65)",
+        "flex": "1",
+        "fontSize": "12px",
+        "outline": "0",
+        "textAlign": "center",
+      }
+    }
+    value={0}
+  />
+</div>
+`;
+
+exports[`Storyshots Tree TreeNode 1`] = `
+<div
+  style={
+    Object {
+      "width": "200px",
+    }
+  }
+>
+  <div
+    className="sc-bdVaJa cnyRph"
+  >
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        className="sc-bwzfXH jdyfrr"
+        onClick={[Function]}
+        title="Node"
+      >
+        Node
+      </span>
+      <div
+        className="sc-htpNat iWRznW"
+      >
+        <test-file-stub
+          className="icon"
+          height="12"
+          onClick={[Function]}
+          width="12"
+        />
+        <test-file-stub
+          className="icon"
+          height="12"
+          onClick={[Function]}
+          width="12"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tree nest tree 1`] = `
+<ul>
+  <div
+    className="sc-bdVaJa cnyRph"
+  >
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        onClick={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "cursor": "pointer",
+            "display": "flex",
+            "width": "10px",
+          }
+        }
+      >
+        <test-file-stub />
+      </span>
+      <span
+        className="sc-bwzfXH jdyfrr"
+        onClick={[Function]}
+        title="书籍"
+      >
+        书籍
+      </span>
+      <div
+        className="sc-htpNat iWRznW"
+      >
+        <test-file-stub
+          className="icon"
+          height="12"
+          onClick={[Function]}
+          width="12"
+        />
+        <test-file-stub
+          className="icon"
+          height="12"
+          onClick={[Function]}
+          width="12"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bdVaJa cnyRph"
+  >
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        onClick={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "cursor": "pointer",
+            "display": "flex",
+            "width": "10px",
+          }
+        }
+      >
+        <test-file-stub />
+      </span>
+      <span
+        className="sc-bwzfXH bXXowQ"
+        onClick={[Function]}
+        title="电影"
+      >
+        电影
+      </span>
+      <div
+        className="sc-htpNat iWRznW"
+      >
+        <test-file-stub
+          className="icon"
+          height="12"
+          onClick={[Function]}
+          width="12"
+        />
+        <test-file-stub
+          className="icon"
+          height="12"
+          onClick={[Function]}
+          width="12"
+        />
+      </div>
+    </div>
+  </div>
+</ul>
+`;
