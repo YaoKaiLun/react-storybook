@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
 import { Tree } from '../components'
+import Wrapper from './Wrapper'
 
 const mockTreeData = [{
   created_at: 1498352255,
@@ -95,13 +96,9 @@ let renderTree = (treeData) => {
 }
 
 storiesOf('Tree', module)
-  .add('TreeNode', () => (
-    <div style={{width: '200px'}}>
-      <Tree.Node isLeaf={true} value="1" title="Node" afterEdit={action('after edit')} afterDelete={action('after delete')} />
-    </div>
-  ))
-  .add('nest tree', () => (
-    <Tree value={35} afterEdit={action('after edit')} afterDelete={action('after delete')} onSelected={action('selected')}>
+  .addDecorator(Wrapper)
+  .add('normal', () => (
+    <Tree value={35} afterEdit={action('after edit')} onDelete={action('on delete')} onSelected={action('selected')}>
       {renderTree(mockTreeData)}
     </Tree>
   ))

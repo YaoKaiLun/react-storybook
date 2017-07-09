@@ -8,7 +8,7 @@ class Tree extends React.Component {
   static propTypes = {
     value: PropTypes.any,
     afterEdit: PropTypes.func,
-    afterDelete: PropTypes.func,
+    onDelete: PropTypes.func,
     onSelected: PropTypes.func
   }
   static defaultProps = {
@@ -35,7 +35,7 @@ class Tree extends React.Component {
       }
 
       return React.cloneElement(child, {
-        afterDelete: props.afterDelete,
+        onDelete: props.onDelete,
         afterEdit: props.afterEdit,
         onSelected: _this.onSelected,
         isActived,
