@@ -65,6 +65,8 @@ class TreeNode extends React.Component {
     isEdit: false,
     isNodeHovered: false,
     isExpand: false,
+    title: this.props.title || '',
+    tempTitle: this.props.title || '',
   }
   static propTypes = {
     isLeaf: PropTypes.bool,
@@ -97,7 +99,7 @@ class TreeNode extends React.Component {
     let props = this.props
     if (isEdit) {
       return <input className="title-input" ref={(input) => { this.titleInput = input }} onBlur={(e) => { this.handleCompleteEdit(e, value) }}
-        style={style['titleInput']} />
+        style={style['titleInput']}  value={title} onChange={this.handleChangeTitle} />
     } else {
       return <span className="title-span" style={{...style['title'], ...(props.isActived ? style['titleActived'] : style['titleNormal'])}} title={title} onClick={() => { this.handleSelected(value, title) }}>{title}</span>
     }
@@ -125,7 +127,7 @@ class TreeNode extends React.Component {
   }
 
   handleEdit = () => {
-    this.setState({isEdit: true})
+    this.setState({isEdit: true, tempTitle: this.state.title})
     setTimeout(() => {
       this.titleInput.focus()
     }, 500)
@@ -133,10 +135,18 @@ class TreeNode extends React.Component {
 
   handleCompleteEdit = (e, value) => {
     let props = this.props
-    this.setState({isEdit: false})
-    if (props.afterEdit) {
-      props.afterEdit(value, e.target.value)
+    if (this.state.title === '') {
+      this.setState({isEdit: false, title: this.state.tempTitle})
+    } else {
+      this.setState({isEdit: false})
+      if (props.afterEdit) {
+        props.afterEdit(value, e.target.value)
+      }
     }
+  }
+
+  handleChangeTitle = (e) => {
+    this.setState({title: e.target.value})
   }
 
   handleDelete = (value) => {
@@ -168,7 +178,7 @@ class TreeNode extends React.Component {
           onMouseEnter={() => { this.toogleHoverState('isNodeHovered') }}
           onMouseLeave={() => { this.toogleHoverState('isNodeHovered') }}>
           {this.renderCaret({isLeaf: props.isLeaf, isExpand: state.isExpand})}
-          {this.renderTitle({value: props.value, title: props.title, isEdit: state.isEdit})}
+          {this.renderTitle({value: props.value, title: state.title, isEdit: state.isEdit})}
           {this.renderToolIcon({value: props.value, isHovered: state.isNodeHovered})}
         </div>
         {!props.isLeaf && state.isExpand && <ul style={{paddingLeft: '15px'}}>{props.children}</ul>}

@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots EditableText normal 1`] = `
+<div
+  style={
+    Object {
+      "width": "300px",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "height": "25px",
+        "width": "100%",
+      }
+    }
+  >
+    <div>
+      
+    </div>
+    <span
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "20px",
+        }
+      }
+    >
+      <test-file-stub
+        height="12"
+        width="12"
+      />
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots NumberRange normal 1`] = `
 <div
   style={
@@ -33,7 +71,7 @@ exports[`Storyshots NumberRange normal 1`] = `
           "textAlign": "center",
         }
       }
-      value={0}
+      value=""
     />
     <span
       style={
@@ -59,8 +97,89 @@ exports[`Storyshots NumberRange normal 1`] = `
           "textAlign": "center",
         }
       }
-      value={0}
+      value=""
     />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select combobox 1`] = `
+<div
+  style={
+    Object {
+      "width": "300px",
+    }
+  }
+>
+  <div>
+    <input
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "height": "27px",
+          "position": "relative",
+          "width": "200px",
+        }
+      }
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select normal 1`] = `
+<div
+  style={
+    Object {
+      "width": "300px",
+    }
+  }
+>
+  <div>
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "boxShadow": "0 1px 6px rgba(0,0,0,.2)",
+          "cursor": "pointer",
+          "display": "flex",
+          "height": "27px",
+          "width": "200px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "boxSizing": "border-box",
+            "display": "inline-block",
+            "paddingLeft": "5px",
+            "width": "93%",
+          }
+        }
+      >
+        
+      </div>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+            "width": "7%",
+          }
+        }
+      >
+        <span>
+          <test-file-stub
+            height="8"
+            width="8"
+          />
+        </span>
+      </span>
+    </div>
   </div>
 </div>
 `;

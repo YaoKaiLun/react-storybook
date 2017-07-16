@@ -13,23 +13,23 @@ const numberInputStyle = {
 
 class NumberRange extends React.Component {
   state = {
-    value: [0, 0]
+    value: ['', '']
   }
 
   static propTypes = {
-    value: PropTypes.arrayOf(PropTypes.number),
+    value: PropTypes.array,
     placeholder: PropTypes.arrayOf(PropTypes.string),
     onChange: PropTypes.func
   }
 
   static defaultProps = {
-    value: [0, 0],
+    value: ['', ''],
     placeholder: ['', '']
   }
 
   handleInputChange = (e, direction) => {
     let props = this.props, state = this.state, newValue = [], result = e.target.value
-    if (!isNumber(result)) {
+    if (!isNumber(result) && result != '') {
       return
     }
     if (direction === 'left') {
