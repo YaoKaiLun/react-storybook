@@ -38,7 +38,7 @@ class Option extends React.Component {
     let value
     let text
     if (state.dataListHover) {
-      optionStyle = {...style.option, ...{backgroundColor: '#b8d9e7'}}
+      optionStyle = {...style.option, ...{backgroundColor: '#f7f7f7'}}
     } else {
       optionStyle = {...style.option}
     }

@@ -19,7 +19,7 @@ exports[`Storyshots EditableText normal 1`] = `
     }
   >
     <div>
-      
+      editable text
     </div>
     <span
       onClick={[Function]}

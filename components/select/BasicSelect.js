@@ -52,6 +52,7 @@ class BasicSelect extends React.Component {
 
   static propTypes = {
     dataSource: PropTypes.array,
+    onSelected: PropTypes.func,
     onChange: PropTypes.func,
     onScroll: PropTypes.func,
   }
@@ -111,6 +112,7 @@ class BasicSelect extends React.Component {
       return (
         <ul style={style.dataListBox} onScroll={this.dataListScroll}>
           {
+            props.dataSource &&
             props.dataSource.map((data) => {
               return <Option data={data} key={data.value ? data.value : data} onSelected={this.onSelected} />
             })
@@ -131,8 +133,8 @@ class BasicSelect extends React.Component {
     } else {
       this.setState({selectedText: text, showDataList: false})
     }
-    if (props.onChange) {
-      props.onChange(value, text)
+    if (props.onSelected) {
+      props.onSelected(value, text)
     }
   }
 

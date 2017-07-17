@@ -8,4 +8,4 @@ import Wrapper from './Wrapper'
 
 storiesOf('EditableText', module)
   .addDecorator(Wrapper)
-  .add('normal', () => <EditableText />)
+  .add('normal', () => <EditableText value="editable text" />)
